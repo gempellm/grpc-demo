@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "github.com/gempellm/my-grpc";
+
+service MyGreeter {
+    rpc GreetIncomer (GreetRequest) returns (GreetReply) {}
+}
+
+message GreetRequest {
+    string name = 1;
+}
+
+message GreetReply {
+    string greet = 1;
+}
